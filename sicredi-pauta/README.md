@@ -75,3 +75,15 @@ Body:
 ```
 
 Este método cadastra um voto para a pauta selecionada, os votos podem ser vistos na chamada de todas as pautas ou na chamada da pauta pelo ID.
+
+## Ferramentas utilizadas
+- IDE: SpringTool
+- Maven
+- Spring Boot
+- Validation (Javax)
+- Spring Data
+- Flyway
+- Spring web
+- MySQL Driver
+- ModelMapper
+
