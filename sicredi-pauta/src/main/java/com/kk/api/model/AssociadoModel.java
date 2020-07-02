@@ -1,0 +1,17 @@
+package com.kk.api.model;
+
+import javax.validation.constraints.NotNull;
+
+public class AssociadoModel {
+	
+	@NotNull
+	private Long id;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+}
