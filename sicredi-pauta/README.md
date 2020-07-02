@@ -12,6 +12,8 @@ Esta API utiliza como banco o MySQL com usuário e senha "sicredi", basta criar 
 ```{host}:{porta}/pautas```
 
 Este método retorna todas as pautas armazenadas na base de dados.
+Pode ser utilizado com um identificador para buscar somente uma pauta.
+```{host}:{porta}/pautas/{id}```
 
 - POST
 
@@ -30,6 +32,6 @@ Este método salva na base de dados uma nova pauta.
 
 ```{host}:{porta}/pautas/{id}/iniciar```
 
-Este método inicia uma pauta, por default ele inicia ela por 1 minuto, mas pode ser adicionado um tempo em minutos no parametro "espera".
+Este método inicia uma pauta, por default é iniciada com duração de 1 minuto, mas pode ser adicionado um tempo em minutos no parametro "espera".
 
 ```{host}:{porta}/pautas/{id}/iniciar?espera=x```
