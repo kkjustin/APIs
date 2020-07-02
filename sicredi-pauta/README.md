@@ -5,6 +5,6 @@ Esta API utiliza como banco o MySQL com usuário e senha "sicredi", basta criar 
 
 ## Rodando os testes
 
-{host}:{porta}/pautas
-Retorna todas as pautas.
-
+1. Pautas
+   - GET
+***{host}:{porta}/pautas***
