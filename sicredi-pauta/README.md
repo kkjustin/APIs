@@ -23,7 +23,7 @@ Pode ser utilizado com um identificador para buscar somente uma pauta.
 Body:
 ```
 {
-    "assunto": "Algum assunto"
+    "assunto": "ALGUM_ASSUNTO"
 }
 ```
 
@@ -38,3 +38,20 @@ Este método inicia uma pauta, por default é iniciada com duração de 1 minuto
 ```{host}:{porta}/pautas/{id}/iniciar?espera=x```
 
 ### 2. Associados
+
+- GET
+
+```{host}:{porta}/associados```
+
+Chamada que retorna todos os associados cadastrados na base de dados.
+
+- POST
+
+```{host}:{porta}/associados```
+
+Body:
+```
+ {
+        "nome": "NOME_DO_ASSOCIADO"
+}
+```
