@@ -7,4 +7,5 @@ Esta API utiliza como banco o MySQL com usuário e senha "sicredi", basta criar 
 
 1. Pautas
    - GET
+   
 ***{host}:{porta}/pautas***
