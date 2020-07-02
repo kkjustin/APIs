@@ -7,6 +7,10 @@ Esta API utiliza como banco o MySQL com usuário e senha "sicredi", basta criar 
 
 1. Pautas
 
-   - GET
+- GET
    
-```***{host}:{porta}/pautas***```
+```{host}:{porta}/pautas```
+
+Este método retorna todas as pautas armazenadas na base de dados.
+
+- POST
