@@ -5,7 +5,7 @@ Esta API utiliza como banco o MySQL com usuário e senha "sicredi", basta criar 
 
 ## Rodando os testes
 
-1. Pautas
+### 1. Pautas
 
 - GET
    
@@ -36,3 +36,5 @@ Este método salva na base de dados uma nova pauta.
 Este método inicia uma pauta, por default é iniciada com duração de 1 minuto, mas pode ser adicionado um tempo em minutos no parametro "espera".
 
 ```{host}:{porta}/pautas/{id}/iniciar?espera=x```
+
+### 2. Associados
