@@ -55,3 +55,23 @@ Body:
         "nome": "NOME_DO_ASSOCIADO"
 }
 ```
+
+Este método cadastra um novo associado.
+
+### 3. Voto
+
+- POST
+
+```{host}:{porta}/pauta/{id}/votar```
+
+Body:
+```
+ {
+    "associado": {
+        "id": {ID_ASSOCIADO}
+    },
+    "resposta": "{RESPOSTA_SIM_OU_NAO}"
+}
+```
+
+Este método cadastra um voto para a pauta selecionada, os votos podem ser vistos na chamada de todas as pautas ou na chamada da pauta pelo ID.
