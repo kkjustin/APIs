@@ -13,6 +13,7 @@ Esta API utiliza como banco o MySQL com usuário e senha "sicredi", basta criar 
 
 Este método retorna todas as pautas armazenadas na base de dados.
 Pode ser utilizado com um identificador para buscar somente uma pauta.
+
 ```{host}:{porta}/pautas/{id}```
 
 - POST
