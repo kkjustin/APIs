@@ -44,7 +44,7 @@ Body:
 
 Este método salva uma nova linha ou altera uma linha existente.
 - Caso 1 = Se o nome for igual o nome da linha que existe na base então o código é alterado;
-- caso 2 = Se o nome for diferente então o nome é alterado.
+- caso 2 = Se o nome for diferente e o código igual então o nome é alterado.
 
 Obs: O banco tem como chave única o id, nome e codigo do registro, dados que violem esta chave não são gravados.
 
@@ -66,42 +66,17 @@ Body:
 }
 ```
 
-### 2. Associados
+Insere um novo itinerário no banco de dados, o id informado deverá ser o de uma linha previamente cadastrada.
 
 - GET
 
-```{host}:{porta}/associados```
+```{host}:{porta}/db/itinerario/porkm```
 
-Chamada que retorna todos os associados cadastrados na base de dados.
-
-- POST
-
-```{host}:{porta}/associados```
-
-Body:
-```
- {
-        "nome": "NOME_DO_ASSOCIADO"
-}
-```
-
-Este método cadastra um novo associado.
-
-### 3. Voto
-
-- POST
-
-```{host}:{porta}/pauta/{id}/votar```
-
-Body:
-```
- {
-    "associado": {
-        "id": {ID_ASSOCIADO}
-    },
-    "resposta": "{RESPOSTA_SIM_OU_NAO}"
-}
-```
+Retorna os itinerários encontrados em um raio conforme a latitude e longitude informados.
+Nesta chamada são necessários 3 parâmetros.
+km -> contém o raio em km.
+lat -> contém a latitude do ponto inicial.
+lng -> contém a longitude do ponto inicial.
 
 Este método cadastra um voto para a pauta selecionada, os votos podem ser vistos na chamada de todas as pautas ou na chamada da pauta pelo ID.
 
