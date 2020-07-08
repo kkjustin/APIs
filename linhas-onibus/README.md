@@ -78,8 +78,6 @@ Nesta chamada são necessários 3 parâmetros.
 2. lat -> contém a latitude do ponto inicial.
 3. lng -> contém a longitude do ponto inicial.
 
-Este método cadastra um voto para a pauta selecionada, os votos podem ser vistos na chamada de todas as pautas ou na chamada da pauta pelo ID.
-
 ## Ferramentas utilizadas
 - IDE: SpringTool
 - Maven
@@ -89,5 +87,3 @@ Este método cadastra um voto para a pauta selecionada, os votos podem ser visto
 - Flyway
 - Spring web
 - MySQL Driver
-- ModelMapper
-
