@@ -71,7 +71,7 @@ Insere um novo itinerário no banco de dados, o id informado deverá ser o de um
 
 ```{host}:{porta}/db/itinerario/porkm```
 
-Retorna os itinerários encontrados em um raio conforme a latitude e longitude informados.
+Retorna os itinerários encontrados em um raio conforme latitude e longitude informados.
 Nesta chamada são necessários 3 parâmetros.
 
 1. km -> contém o raio em km.
