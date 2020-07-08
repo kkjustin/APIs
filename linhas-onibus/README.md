@@ -13,11 +13,12 @@ Estas chamadas buscam dados da API http://datapoa.com.br/group/about/mobilidade.
    
 ```{host}:{porta}/linhas```
 
-Retorna todas as linhas de ônibus do endereço http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%&t=o.
+Retorna todas as linhas de ônibus da chamada http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%&t=o.
 
 ```{host}:{porta}/itinerario/{id}```
 
 Retorna todos os itinerarios da linha informada no id da chamada.
+Chamada exemplo: http://www.poatransporte.com.br/php/facades/process.php?a=il&p=5566 
 
 ### 2. Banco de dados (MySQL)
 
@@ -36,19 +37,34 @@ Retorna todas as linhas cadastradas no banco de dados.
 Body:
 ```
 {
-    "assunto": "ALGUM_ASSUNTO"
+    "nome": "NOME_DA_LINHA",
+    "codigo": "CÓDIGO_DA_LINHA"
 }
 ```
 
-Este método salva na base de dados uma nova pauta.
+Este método salva uma nova linha ou altera uma linha existente.
+- Caso 1 = Se o nome for igual o nome da linha que existe na base então o código é alterado;
+- caso 2 = Se o nome for diferente então o nome é alterado.
+
+Obs: O banco tem como chave única o id, nome e codigo do registro, dados que violem esta chave não são gravados.
+
+- GET
+
+```{host}:{porta}/db/itinerario```
+
+Retorna todos os itinerários cadastrados no banco de dados
 
 - PUT
 
-```{host}:{porta}/pautas/{id}/iniciar```
+```{host}:{porta}/db/itinerario/{id}```
 
-Este método inicia uma pauta, por default é iniciada com duração de 1 minuto, mas pode ser adicionado um tempo em minutos no parametro "espera".
-
-```{host}:{porta}/pautas/{id}/iniciar?espera=x```
+Body:
+```
+{
+    "lat": "LATITUDE",
+    "lng": "LONGITUDE"
+}
+```
 
 ### 2. Associados
 
