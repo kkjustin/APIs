@@ -18,7 +18,6 @@ Retorna todas as linhas de ônibus da chamada http://www.poatransporte.com.br/ph
 ```{host}:{porta}/itinerario/{id}```
 
 Retorna todos os itinerarios da linha informada no id da chamada.
-Chamada exemplo: http://www.poatransporte.com.br/php/facades/process.php?a=il&p=5566 
 
 ### 2. Banco de dados (MySQL)
 
