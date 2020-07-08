@@ -23,10 +23,15 @@ Retorna todos os itinerarios da linha informada no id da chamada.
 
 As chamadas a seguir realizam operações na base de dados.
 
+- GET
 
-- POST
+```{host}:{porta}/db/linha```
 
-```{host}:{porta}/pautas```
+Retorna todas as linhas cadastradas no banco de dados.
+
+- PUT
+
+```{host}:{porta}/db/linha```
 
 Body:
 ```
