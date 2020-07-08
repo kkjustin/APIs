@@ -15,7 +15,14 @@ Estas chamadas buscam dados da API http://datapoa.com.br/group/about/mobilidade.
 
 Retorna todas as linhas de ônibus do endereço http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%&t=o.
 
-```{host}:{porta}/pautas/{id}```
+```{host}:{porta}/itinerario/{id}```
+
+Retorna todos os itinerarios da linha informada no id da chamada.
+
+### 2. Banco de dados (MySQL)
+
+As chamadas a seguir realizam operações na base de dados.
+
 
 - POST
 
