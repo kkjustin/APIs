@@ -74,9 +74,9 @@ Insere um novo itinerário no banco de dados, o id informado deverá ser o de um
 Retorna os itinerários encontrados em um raio conforme a latitude e longitude informados.
 Nesta chamada são necessários 3 parâmetros.
 
-* km -> contém o raio em km.
-* lat -> contém a latitude do ponto inicial.
-* lng -> contém a longitude do ponto inicial.
+1. km -> contém o raio em km.
+2. lat -> contém a latitude do ponto inicial.
+3. lng -> contém a longitude do ponto inicial.
 
 Este método cadastra um voto para a pauta selecionada, os votos podem ser vistos na chamada de todas as pautas ou na chamada da pauta pelo ID.
 
