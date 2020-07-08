@@ -1,18 +1,19 @@
-# SICREDI API - Teste de seleção
+# API - Teste de seleção
 
 ### Pré-requisito
-Esta API utiliza como banco o MySQL com usuário e senha "sicredi", basta criar o usuário no banco com as permissões que a própria API cria o Schema e tabelas.
+Esta API utiliza como banco o MySQL com usuário e senha "dba_onibus", basta criar o usuário no banco com as permissões que a própria API cria o Schema e tabelas.
 
 ## Rodando os testes
 
-### 1. Pautas
+### 1. API Datapoa
+
+Estas chamadas buscam dados da API http://datapoa.com.br/group/about/mobilidade.
 
 - GET
    
-```{host}:{porta}/pautas```
+```{host}:{porta}/linhas```
 
-Este método retorna todas as pautas armazenadas na base de dados.
-Pode ser utilizado com um identificador para buscar somente uma pauta.
+Retorna todas as linhas de ônibus do endereço http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%&t=o.
 
 ```{host}:{porta}/pautas/{id}```
 
