@@ -42,8 +42,9 @@ Body:
 ```
 
 Este método salva uma nova linha ou altera uma linha existente.
-- Caso 1 = Se o nome for igual o nome da linha que existe na base então o código é alterado;
-- caso 2 = Se o nome for diferente e o código igual então o nome é alterado.
+1. Caso 1 = Se o nome for igual o nome da linha que existe na base então o código é alterado;
+2. caso 2 = Se o nome for diferente e o código igual então o nome é alterado.
+
 
 - GET
 
