@@ -33,6 +33,12 @@ public class CadastroItinerarioService {
 		Linha linha = linhaRepository.findById(linhaId)
 				.orElseThrow(() -> new NegocioException("Linha não encontrada"));
 		
+		Double lat = converterParam(itinerarioInput.getLat(), "lat");
+		Double lng = converterParam(itinerarioInput.getLng(), "lng");
+		
+		if(lat < -90 || lat > 90) throw new NegocioException("Latitude inválida");
+		if(lng < -180 || lng > 180) throw new NegocioException("Longitude inválida");
+		
 		Itinerario itinerario = new Itinerario();
 		itinerario.setLinha(linha);
 		itinerario.setLat(itinerarioInput.getLat());
@@ -66,9 +72,9 @@ public class CadastroItinerarioService {
 		Double lng = 0.0;
 		
 		try {
-			km = converterParam(request.getParameter("km"));
-			lat = converterParam(request.getParameter("lat"));
-			lng = converterParam(request.getParameter("lng"));
+			km = converterParam(request.getParameter("km"), "km");
+			lat = converterParam(request.getParameter("lat"), "lat");
+			lng = converterParam(request.getParameter("lng"), "lng");
 		} catch (Exception e) {
 			throw new NegocioException("Favor adicionar todos os parametros (km, lat, lng)");
 		}
@@ -92,7 +98,11 @@ public class CadastroItinerarioService {
 		return itinerarios;		
 	}
 	
-	private Double converterParam(String param) {
-		return Double.parseDouble(param);
+	private Double converterParam(String param, String campo) {
+		try {
+			return Double.parseDouble(param);
+		} catch (NumberFormatException e) {
+			throw new NegocioException("Informar um valor válido para " + campo + ".");
+		}
 	}
 }
